@@ -1,0 +1,240 @@
+*{
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+}
+body{
+    background : url(/assets/images/background.webp) center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+h1{
+    text-transform: uppercase;
+}
+/* Style all areas together  */
+.game-area ,.rules-area, .quiz-area, .end-page,.high-score-area{
+        width: 600px;
+        min-height: 420px;
+        max-width: 70%;
+        background: rgba(246, 63, 158, .7);
+        border-radius: 16px;
+        border: 1px solid rgba(245, 6, 6);
+        position: relative;
+        text-align: center;
+        
+      
+}
+/* Style logo with heading inside */
+.logo{
+    font-size: 30px;
+    font-family:  sans-serif;
+    font-weight: 400;
+    text-align: center;
+    background-color: #d7f309;
+    border: 2px solid rgba(245, 6, 6);
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px 0px 20px 0px;
+    position: relative;
+}
+/* Style hidden class to be used in JS */
+.hidden{
+    display: none;
+}
+/* Add hover property to class hover */
+.hover:hover {
+    background-color: rgb(248, 8, 208);
+   
+}
+/* Style correct and incorrect class to be used in JS*/
+.correct {
+    background-color: rgb(28, 241, 28);
+}
+.incorrect {
+    background-color: rgb(246, 72, 8);
+}
+/* Style Rule Area */
+.rules-area h2{
+    font-weight: 400;
+    font-size: 180%;
+    color: aqua;
+    text-transform: capitalize;  
+}
+.rules-area p {
+    color: rgb(249, 253, 253);
+    font-size: 120%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    
+}
+li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    padding-left:20px ;
+    line-height: 20px;
+    text-align: left;
+    color: aquamarine;
+}
+
+#start-page{
+    top: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+#start-page h2{
+    font-weight: 400;
+    font-size: 180%;
+    color: aqua;
+    text-transform: capitalize;
+}
+#start-page p{
+    color: rgb(249, 251, 251);
+    font-size: 120%;
+}
+
+button {
+    font-size: 16px;
+    min-width: 80px;
+    font-weight: 500;
+    height: 40px;
+    width: 200px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #111212;
+    background-color: #d7f309;
+    color: rgb(10, 10, 10);
+    text-transform: capitalize;
+}
+
+button:hover {
+    cursor: pointer;
+    color: rgb(6, 6, 6);
+    transition: 400ms;
+}
+#question-container {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#quiz-image{
+    min-width: 60%;
+    max-height: 35vh;
+    padding: 10px;
+    
+}
+
+#guess{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(8, 209, 244);
+    font-size: 180%;
+    text-transform:capitalize;
+}
+.answer-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+.answer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+           
+}
+
+.next-go-home-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.next-btn, .go-home-btn {
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    height: 90%;
+    background-color: rgb(215, 250, 221);
+    
+}
+
+#info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+#finish{
+    position: relative;
+    padding-bottom: 20px;
+}
+.high-score-area h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(36, 206, 244);
+    font-size: 150%;
+}
+table, td, tr, th {
+    border: 1px solid rgb(219, 243, 7);
+    padding: 0.25rem;
+    color: aqua;
+}
+th{
+    color: bisque;
+}
+
+table { 
+    max-width: 45vh;
+    width: 60%;
+    margin-bottom: 30px;
+}
+#finish h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(36, 206, 244);
+    font-size: 150%;
+}
+#finish p{
+    color: rgb(36, 206, 244);
+    font-size: 120%;
+}
+.username {
+    width: 60%;
+    max-width: 45vh;
+    margin-bottom: 30px;
+    line-height: 50px;
+    display: block;
+    border: 4px solid #3c3c3c;
+    text-align: center;
+    font-size: 150%;
+    background-color: greenyellow;
+}
+@media screen and (max-width: 1200px){ 
+    #quiz-image{
+        max-width: 70%;
+        max-height: 20vh;
+    }
+}
+@media screen and (max-width: 950px){
+    .quiz-area{
+        max-height: 100%;
+    }
+} 
