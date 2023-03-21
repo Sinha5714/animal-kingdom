@@ -163,6 +163,9 @@ for (let i = 0; i < answerButtons.length; i++) {
  */
 function newQuestions(){ 
     quizProgress++;
+    /**
+     * Once the length of question reaches 10, endPage opens and score is updated
+     */ 
     if(quizProgress > 10){
         quizArea.classList.add('hidden');
         endPage.classList.remove('hidden');
@@ -276,4 +279,48 @@ function countdown() {
 function resetTimer(){
     clearInterval(timer);
 }
+/**
+ * Function for opening rules page
+ * Applied to buttons when clicked
+ */
+function openRule(){
+    gameArea.classList.add("hidden");
+    rulesArea.classList.remove("hidden");    
+}
+/**
+ * Function to close rules page and back to main page
+ * Applied to buttons when clicked
+ */
+function closeRule(){
+    gameArea.classList.remove("hidden");
+    rulesArea.classList.add("hidden");
+    window.location.reload();
+}
+/**
+ * Function for opening high score page
+ * Applied to buttons when clicked
+ */
+function openHighScore(){
+    gameArea.classList.add("hidden");
+    highScoreArea.classList.remove("hidden");
+}
+/**
+ * Function to close high score page
+ * Applied to buttons when clicked
+ */
+function closeHighScore(){
+    gameArea.classList.remove("hidden");
+    highScoreArea.classList.add("hidden");
+    window.location.reload();
+}
+/**
+ * Function for closing end page
+ * Applied to buttons when clicked
+ */
+function closeEndPage(){
+    gameArea.classList.remove("hidden");
+    endPage.classList.add("hidden");
+   
+}
+
 
