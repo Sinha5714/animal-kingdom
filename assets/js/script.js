@@ -21,11 +21,6 @@ let questions = [
         answer : 'Butterfly'
     },
     {
-        question: 'assets/images/animals/cat.webp',
-        answers: ['Dog', 'Cat','Horse','Cheetah' ],
-        answer : 'Cat'
-    },
-    {
         question: 'assets/images/animals/cheetah.jpeg',
         answers: ['Leopard', 'Cat','Cheetah','Hippopotamus' ],
         answer : 'Cheetah'
@@ -44,11 +39,6 @@ let questions = [
         question: 'assets/images/animals/deer.jpeg',
         answers: ['Cow', 'Tiger','Lion','Deer' ],
         answer : 'Deer'
-    },
-    {
-        question: 'assets/images/animals/dog.webp',
-        answers: ['Cat', 'Dog','Wolf','Sheep' ],
-        answer : 'Dog'
     },
     {
         question: 'assets/images/animals/dolphin.webp',
