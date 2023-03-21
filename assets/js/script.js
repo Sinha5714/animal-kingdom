@@ -101,7 +101,7 @@ let questions = [
         answer : 'Giraffe'
     }   
 ];
-/*
+/**
 * DOM elements here 
 */
 let gameArea = document.querySelector('.game-area');
@@ -132,8 +132,53 @@ let userAnswer = document.getElementById('user-answer');
 let table = document.getElementById('high-scores');
 let userFinalScore = document.getElementById('user-final-score');
 
-let availableQuestions = [];
+let availableQuestions = []; 
 let quizProgress = 0;
 let correctQuestions= 0;
+let currentQuestion = {};
 let timer;
 let timeLeft;
+
+/** 
+ * startGame function here
+ */
+function startGame(){
+    gameArea.classList.add("hidden");
+    quizArea.classList.remove("hidden");
+    correctQuestions = 0;
+    availableQuestions = [...questions]; // Full copy of questions
+    newQuestions();
+   
+    timerElement.innerText = 15;
+             
+}
+/**
+ * Add event listener to answerButtons
+ */
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener("click", checkAnswer);
+}
+/**
+ * Fuction newQuestions for randomly generating questions
+ */
+function newQuestions(){ 
+    quizProgress++;
+    if(quizProgress > 10){
+        quizArea.classList.add('hidden');
+        endPage.classList.remove('hidden');
+        userFinalScore.innerText = userScore.innerText;
+        userName.value = '';    
+    }
+
+    let shuffleQuestions = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[shuffleQuestions];
+    qImg.src = currentQuestion.question;
+    option1.innerText = currentQuestion.answers[0];
+    option2.innerText = currentQuestion.answers[1];
+    option3.innerText = currentQuestion.answers[2];
+    option4.innerText = currentQuestion.answers[3]; 
+    // For making sure question displayed is not repeated
+    // Obtain idea of splice from my Sister 
+    availableQuestions.splice(shuffleQuestions, 1); 
+  
+}
