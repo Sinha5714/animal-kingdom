@@ -99,7 +99,72 @@ let questions = [
         question: 'assets/images/animals/giraffe.jpeg',
         answers: ['Lion', 'Elephant','Giraffe','Camel' ],
         answer : 'Giraffe'
-    }   
+    },
+    {
+        question: 'assets/images/animals/lion.jpeg',
+        answers: ['Tiger', 'Lion','Cheetah','Puma' ],
+        answer : 'Lion'
+    }, 
+    {
+        question: 'assets/images/animals/lizard.jpeg',
+        answers: ['Lizard', 'Snake','Spider','Frog' ],
+        answer : 'Lizard'
+    }, 
+    {
+        question: 'assets/images/animals/monkey.jpeg',
+        answers: ['Chimpangee', 'Gorilla','Monkey','Dog' ],
+        answer : 'Monkey'
+    }, 
+    {
+        question: 'assets/images/animals/mosquito.webp',
+        answers: ['Butterfly', 'Bug','Mosquito','Frog' ],
+        answer : 'Mosquito'
+    }, 
+    {
+        question: 'assets/images/animals/octopus.jpeg',
+        answers: ['Octopus', 'Fish','Prawn','Squid' ],
+        answer : 'Octopus'
+    }, 
+    {
+        question: 'assets/images/animals/ostrich.jpeg',
+        answers: ['Sparrow', 'Crow','Ostrich','Parrot' ],
+        answer : 'Ostrich'
+    }, 
+    {
+        question: 'assets/images/animals/owl.jpeg',
+        answers: ['Owl', 'Parrot','Emu','Ostrich' ],
+        answer : 'Owl'
+    }, 
+    {
+        question: 'assets/images/animals/parrot.webp',
+        answers: ['Duck', 'Crow','Ostrich','Parrot'],
+        answer : 'Parrot'
+    }, 
+    {
+        question: 'assets/images/animals/rabbit.jpeg',
+        answers: ['Tiger', 'Rabbit','Otter','Rat' ],
+        answer : 'Rabbit'
+    }, 
+    {
+        question: 'assets/images/animals/squirrel.jpeg',
+        answers: ['Fox', 'Rabbit','Squirrel','Rat' ],
+        answer : 'Squirrel'
+    }, 
+    {
+        question: 'assets/images/animals/tortoise.jpeg',
+        answers: ['Tortoise', 'Turtle','Dinosaur','Slug' ],
+        answer : 'Tortoise'
+    },
+    {
+        question: 'assets/images/animals/tiger.jpeg',
+        answers: ['Leopard', 'Lion','Tiger','Puma' ],
+        answer : 'Tiger'
+    },
+    {
+        question: 'assets/images/animals/zebra.jpeg',
+        answers: ['Cow', 'Donkey','Horse','Zebra' ],
+        answer : 'Zebra'
+    }
 ];
 /**
 * DOM elements here 
