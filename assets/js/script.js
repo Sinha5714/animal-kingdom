@@ -319,8 +319,26 @@ function closeHighScore(){
  */
 function closeEndPage(){
     gameArea.classList.remove("hidden");
+    endPage.classList.add("hidden");   
+}
+/**
+ * Function to save username and score in the highScore table
+ */
+function saveHighScore(){
     endPage.classList.add("hidden");
-   
+    highScoreArea.classList.remove("hidden");
+    
+    userFinalScore = userScore.innerText;
+    let playerName = document.getElementById('player').innerText;
+    playerName = userName.value;
+    console.log(playerName);
+    let row = table.insertRow();
+    let td1 = row.insertCell(0);
+    let td2 = row.insertCell(1);
+    td1.innerText =  playerName;
+    td2.innerText = userFinalScore;
+    
+
 }
 
 
