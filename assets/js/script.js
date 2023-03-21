@@ -102,7 +102,7 @@ let questions = [
     }, 
     {
         question: 'assets/images/animals/monkey.jpeg',
-        answers: ['Chimpangee', 'Gorilla','Monkey','Dog' ],
+        answers: ['Chimpanzee', 'Gorilla','Monkey','Dog' ],
         answer : 'Monkey'
     }, 
     {
