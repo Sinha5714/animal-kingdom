@@ -194,6 +194,7 @@ let currentQuestion = {};
 let timer;
 let timeLeft;
 
+
 /** 
  * startGame function here
  */
@@ -204,23 +205,22 @@ function startGame(){
     availableQuestions = [...questions]; // Full copy of questions
     newQuestions();
     startTimer();
-    timerElement.innerText = 15;
-             
+    timerElement.innerText = 15;             
 }
+
 /**
  * Add event listener to answerButtons
  */
 for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].addEventListener("click", checkAnswer);
 }
+
 /**
  * Fuction newQuestions for randomly generating questions
  */
 function newQuestions(){ 
     quizProgress++;
-    /**
-     * Once the length of question reaches 10, endPage opens and score is updated
-     */ 
+    //Once the length of question reaches 10, endPage opens and score is updated 
     if(quizProgress > 10){
         quizArea.classList.add('hidden');
         endPage.classList.remove('hidden');
@@ -237,7 +237,7 @@ function newQuestions(){
     option3.innerText = currentQuestion.answers[2];
     option4.innerText = currentQuestion.answers[3]; 
     // For making sure question displayed is not repeated
-    // Obtain idea of splice from my Sister 
+    // Obtain idea of splice from my family member 
     availableQuestions.splice(shuffleQuestions, 1); 
   
 }
@@ -252,14 +252,12 @@ function checkAnswer() {
     
         if (userAnswer === correctAnswer) {
             this.classList.add("correct");
-            incrementScore(); 
-             
-            
+            incrementScore();    
         } else {
             this.classList.add("incorrect"); 
-        }
-       
+        }      
 }
+
 /**
  * Function to disable answerButtons once an option has been selected
  */
@@ -301,7 +299,7 @@ function incrementScore(){
     correctQuestions++;  
 }
 /**
- * Function for Btn go Home in quizArea
+ * Function for Btn go-Home in quizArea
  */
 function goHome(){
     gameArea.classList.remove("hidden");
@@ -351,7 +349,7 @@ function openRule(){
 function closeRule(){
     gameArea.classList.remove("hidden");
     rulesArea.classList.add("hidden");
-    window.location.reload();
+    
 }
 /**
  * Function for opening high score page
@@ -370,21 +368,23 @@ function closeHighScore(){
     highScoreArea.classList.add("hidden");
     window.location.reload();
 }
+
 /**
  * Function for closing end page
  * Applied to buttons when clicked
  */
 function closeEndPage(){
     gameArea.classList.remove("hidden");
-    endPage.classList.add("hidden");   
+    endPage.classList.add("hidden");
+    window.location.reload();       
 }
+
 /**
  * Function to save username and score in the highScore table
  */
 function saveHighScore(){
     endPage.classList.add("hidden");
     highScoreArea.classList.remove("hidden");
-    
     userFinalScore = userScore.innerText;
     let playerName = document.getElementById('player').innerText;
     playerName = userName.value;
@@ -393,9 +393,7 @@ function saveHighScore(){
     let td1 = row.insertCell(0);
     let td2 = row.insertCell(1);
     td1.innerText =  playerName;
-    td2.innerText = userFinalScore;
-    
-
+    td2.innerText = userFinalScore; 
 }
 
 
