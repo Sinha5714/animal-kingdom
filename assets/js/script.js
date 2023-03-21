@@ -134,7 +134,7 @@ let userFinalScore = document.getElementById('user-final-score');
 
 let availableQuestions = []; 
 let quizProgress = 0;
-let correctQuestions= 0;
+let correctQuestions= 0; // The correct questions selected by user
 let currentQuestion = {};
 let timer;
 let timeLeft;
@@ -170,6 +170,7 @@ function newQuestions(){
         quizArea.classList.add('hidden');
         endPage.classList.remove('hidden');
         userFinalScore.innerText = userScore.innerText;
+        userAnswer.innerText = `${correctQuestions}`;
         userName.value = '';    
     }
 
@@ -241,7 +242,8 @@ function resetAnswerButtons() {
  */
 function incrementScore(){
     let oldScore = parseInt(userScore.innerText);
-    userScore.innerText = oldScore + 10;    
+    userScore.innerText = oldScore + 10;  
+    correctQuestions++;  
 }
 /**
  * Function for Btn go Home in quizArea
