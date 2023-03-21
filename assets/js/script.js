@@ -160,21 +160,17 @@ let questions = [
 * DOM elements here 
 */
 let gameArea = document.querySelector('.game-area');
-let openRulesBtn = document.getElementById('rules-btn');
 let rulesArea = document.querySelector('.rules-area');
-let returnHome = document.getElementById('home-btn');
-let startGameBtn = document.getElementById('play-btn');
 let quizArea = document.querySelector('.quiz-area');
-let highScoreBtn = document.getElementById('high-scores-btn');
 let highScoreArea = document.querySelector('.high-score-area');
 
-let questionContainer = document.getElementById('question-container');
+
 let qImg= document.getElementById('quiz-image');
 let answerButtons = document.getElementsByClassName('answer');
 let option1 = document.getElementById('option1');
 let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
-let option4 = document.getElementById('option4');;
+let option4 = document.getElementById('option4');
 let userScore = document.getElementById('user-score');
 let timerElement = document.getElementById('timer');
 
@@ -278,7 +274,7 @@ function nextQuestion() {
  * Resets the answerButton back to its original state
  */ 
 function resetAnswerButtons() {
-    for(i=0; i<answerButtons.length; i++){
+    for(let i=0; i<answerButtons.length; i++){
         answerButtons[i].classList.remove("correct");
         answerButtons[i].classList.remove("incorrect");
         answerButtons[i].classList.add("hover");
