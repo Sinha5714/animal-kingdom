@@ -101,3 +101,39 @@ let questions = [
         answer : 'Giraffe'
     }   
 ];
+/*
+* DOM elements here 
+*/
+let gameArea = document.querySelector('.game-area');
+let openRulesBtn = document.getElementById('rules-btn');
+let rulesArea = document.querySelector('.rules-area');
+let returnHome = document.getElementById('home-btn');
+let startGameBtn = document.getElementById('play-btn');
+let quizArea = document.querySelector('.quiz-area');
+let highScoreBtn = document.getElementById('high-scores-btn');
+let highScoreArea = document.querySelector('.high-score-area');
+
+let questionContainer = document.getElementById('question-container');
+let qImg= document.getElementById('quiz-image');
+let answerButtons = document.getElementsByClassName('answer');
+let option1 = document.getElementById('option1');
+let option2 = document.getElementById('option2');
+let option3 = document.getElementById('option3');
+let option4 = document.getElementById('option4');
+let goHomeBtn = document.getElementById('go-home-btn');
+let nextBtn= document.getElementById('next-btn');
+let userScore = document.getElementById('user-score');
+let timerElement = document.getElementById('timer');
+
+let userName = document.querySelector('.username');
+let endPage = document.querySelector('.end-page');
+let endHomeBtn= document.getElementById('end-home-btn');
+let userAnswer = document.getElementById('user-answer');
+let table = document.getElementById('high-scores');
+let userFinalScore = document.getElementById('user-final-score');
+
+let availableQuestions = [];
+let quizProgress = 0;
+let correctQuestions= 0;
+let timer;
+let timeLeft;
