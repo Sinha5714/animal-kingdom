@@ -194,7 +194,6 @@ let currentQuestion = {};
 let timer;
 let timeLeft;
 
-
 /** 
  * startGame function here
  */
@@ -304,7 +303,7 @@ function incrementScore(){
 function goHome(){
     gameArea.classList.remove("hidden");
     quizArea.classList.add("hidden");
-    window.location.reload();
+    window.document.reload(gameArea);
 }
 /**
  * Function to start timer in quiz area
@@ -348,8 +347,7 @@ function openRule(){
  */
 function closeRule(){
     gameArea.classList.remove("hidden");
-    rulesArea.classList.add("hidden");
-    
+    rulesArea.classList.add("hidden");   
 }
 /**
  * Function for opening high score page
