@@ -57,7 +57,8 @@ h1{
 .incorrect {
     background-color: rgb(246, 72, 8);
 }
-/* Style Rule Area */
+
+/* Style Rules Area */
 .rules-area h2{
     font-weight: 400;
     font-size: 180%;
@@ -69,8 +70,8 @@ h1{
     font-size: 120%;
     margin-top: 20px;
     margin-bottom: 20px;
-    text-transform: capitalize;
-    
+    text-transform: capitalize; 
+    text-decoration: underline;   
 }
 li{
     margin-top: 20px;
@@ -82,6 +83,7 @@ li{
     color: aquamarine;
 }
 
+/* Style home page */
 #start-page{
     top: 30px;
     margin-bottom: 50px;
@@ -98,6 +100,7 @@ li{
     font-size: 120%;
 }
 
+/* Style all buttons */
 button {
     font-size: 16px;
     min-width: 80px;
@@ -115,25 +118,24 @@ button {
     color: rgb(10, 10, 10);
     text-transform: capitalize;
 }
-
 button:hover {
     cursor: pointer;
     color: rgb(6, 6, 6);
     transition: 400ms;
 }
+
+/* Style quiz-area */
 #question-container {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 #quiz-image{
     min-width: 60%;
     max-height: 35vh;
     padding: 10px;
     
 }
-
 #guess{
     margin-top: 30px;
     margin-bottom: 20px;
@@ -146,18 +148,14 @@ button:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row;
-    
+    flex-direction: row;   
 }
-
 .answer {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     padding: 10px;
-    margin: 10px;
-           
+    margin: 10px;           
 }
-
 .next-go-home-btns{
     display: flex;
     flex-direction: row;
@@ -168,10 +166,8 @@ button:hover {
     padding: 10px;
     margin: 10px;
     height: 90%;
-    background-color: rgb(215, 250, 221);
-    
+    background-color: rgb(215, 250, 221);    
 }
-
 #info {
     width: 100%;
     display: flex;
@@ -182,29 +178,11 @@ button:hover {
     padding-bottom: 20px;
     padding-top: 10px;
 }
+
+/* Style end Page */
 #finish{
     position: relative;
     padding-bottom: 20px;
-}
-.high-score-area h2{
-    margin-top: 30px;
-    margin-bottom: 20px;
-    color: rgb(36, 206, 244);
-    font-size: 150%;
-}
-table, td, tr, th {
-    border: 1px solid rgb(219, 243, 7);
-    padding: 0.25rem;
-    color: aqua;
-}
-th{
-    color: bisque;
-}
-
-table { 
-    max-width: 45vh;
-    width: 60%;
-    margin-bottom: 30px;
 }
 #finish h2{
     margin-top: 30px;
@@ -227,6 +205,27 @@ table {
     font-size: 150%;
     background-color: greenyellow;
 }
+.high-score-area h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(36, 206, 244);
+    font-size: 150%;
+}
+table, td, tr, th {
+    border: 1px solid rgb(219, 243, 7);
+    padding: 0.25rem;
+    color: aqua;
+}
+th{
+    color: bisque;
+}
+
+table { 
+    max-width: 45vh;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width: 1200px){ 
     #quiz-image{
         max-width: 70%;

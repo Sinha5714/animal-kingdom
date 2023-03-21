@@ -22,6 +22,7 @@
             <p><strong>Proceed to test your knowledge!</strong></p>
         </div>
         <div class="home-screen-area">
+            <!-- Buttons have been provided onclick attribute with required functions -->
             <button aria-label="Play quiz" onclick="startGame()" class="btn hover" id="play-btn">Play</button>
             <button aria-label="How to play" onclick="openRule()"class="btn hover" id="rules-btn">How to play</button>               
             <button aria-label="High scores" onclick="openHighScore()" class="btn high-scores-btn hover" id="high-scores-btn">High Scores</button>
@@ -40,8 +41,10 @@
                 <li>Try to get on the top position of High Score Board</li>
             </ul>
             <p><strong>Good luck and enjoy!</strong></p>
+            <!-- Button have been provided onclick attribute with required functions -->
             <button aria-label="Return home" onclick="closeRule()" class="btn hover" id="home-btn">Home</button>
         </section>
+
         <!-- Main game area : quiz-area -->
         <section class ="quiz-area hidden ">
             <header class = "logo-container">
@@ -58,6 +61,7 @@
                 <button aria-label="Option 4" class="answer hover" id="option4" >option4</button>
             </div>
             <div class="next-go-home-btns">
+                <!-- Buttons have been provided onclick attribute with required functions -->
                 <button aria-label="Go home" class="btn hover go-home-btn" onclick= "goHome()" id="go-home-btn">Go Home</button>
                 <button aria-label="Next" onclick="nextQuestion()" class="btn next-btn hover" id="next-btn">Next</button>
             </div>
@@ -67,6 +71,7 @@
                 <p>Time:  <span id="timer"></span>  s</p>
             </div>
         </section>
+
         <!-- End Page Area : end-page -->
         <section class="end-page hidden">
             <header class = "logo-container">
@@ -78,11 +83,13 @@
                 <p><strong>Your total score is <span id ="user-final-score"></span></strong> /100</p>
                 <br>
                 <input aria-label="Enter username" type="text" required name="username" class = "username"  placeholder="Username">
+                <!-- Buttons have been provided onclick attribute with required functions -->
                 <button aria-label="Save high score" onclick ="saveHighScore()" type="submit" class="btn end-btn hover" id="save-score-btn">Save High
                 Score</button>
                 <button aria-label="Return home" onclick="closeEndPage()" class="btn end-btn hover " id="end-home-btn">Home</button>
             </div>
         </section>
+
         <!-- Highscore Page : high-score-area -->
         <section class="high-score-area  hidden">
             <header class = "logo-container">
@@ -103,12 +110,10 @@
                     <td><Span id ="user-final-score"></Span></td>
                 </tr>
             </table>
+            <!-- Buttons have been provided onclick attribute with required functions -->
             <button aria-label="Return home" onclick="closeHighScore()" class="btn end-btn hover " id="end-home-btn">Home</button>
-        </section>
-                    
+        </section>               
     </section>
-
-
 
 <!-- Link JS file-->
 <script src="assets/js/script.js"></script>  

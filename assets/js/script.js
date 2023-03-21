@@ -148,7 +148,7 @@ function startGame(){
     correctQuestions = 0;
     availableQuestions = [...questions]; // Full copy of questions
     newQuestions();
-   
+    startTimer();
     timerElement.innerText = 15;
              
 }
@@ -182,3 +182,98 @@ function newQuestions(){
     availableQuestions.splice(shuffleQuestions, 1); 
   
 }
+/**
+ * Function to check answer provided by user
+ */
+function checkAnswer() {
+    disableAnswerButtons();
+    
+    let userAnswer = this.innerText;
+    let correctAnswer = currentQuestion.answer;
+    
+        if (userAnswer === correctAnswer) {
+            this.classList.add("correct");
+            incrementScore(); 
+             
+            
+        } else {
+            this.classList.add("incorrect"); 
+        }
+       
+}
+/**
+ * Function to disable answerButtons once an option has been selected
+ */
+function disableAnswerButtons() {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].classList.remove("hover");
+        // Idea about setAttribute was provided by one of the student from slack
+        answerButtons[i].setAttribute("disabled", "disabled");
+    }
+}
+/**
+ * Function for behaviour of page after getting next question
+ */
+function nextQuestion() {
+    timerElement.innerText = 15;
+    startTimer();
+    resetTimer();
+    newQuestions();
+    resetAnswerButtons();    
+}
+/**
+ * Resets the answerButton back to its original state
+ */ 
+function resetAnswerButtons() {
+    for(i=0; i<answerButtons.length; i++){
+        answerButtons[i].classList.remove("correct");
+        answerButtons[i].classList.remove("incorrect");
+        answerButtons[i].classList.add("hover");
+        answerButtons[i].removeAttribute("disabled","disabled");
+    } 
+}
+/**
+ * Function to increment score once the right option is selected by user
+ * Idea taken from Love Maths project
+ */
+function incrementScore(){
+    let oldScore = parseInt(userScore.innerText);
+    userScore.innerText = oldScore + 10;    
+}
+/**
+ * Function for Btn go Home in quizArea
+ */
+function goHome(){
+    gameArea.classList.remove("hidden");
+    quizArea.classList.add("hidden");
+    window.location.reload();
+}
+/**
+ * Function to start timer in quiz area
+ */
+function startTimer(){
+    timeLeft = 15;
+    timer = setInterval(function () {
+        countdown();
+        timerElement.innerText = timeLeft;
+    }, 1000);
+}
+/**
+ * Function for count down of timer
+ * Idea obtain from one of the students from slack
+ */
+function countdown() {
+    if (timeLeft === 0) {
+       disableAnswerButtons();
+    } else {
+        timeLeft--;
+    }
+}
+/**
+ * Function to reset timer
+ * Idea obtain from google.com
+ */
+function resetTimer(){
+    clearInterval(timer);
+}
+
