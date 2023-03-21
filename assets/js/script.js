@@ -174,15 +174,12 @@ let answerButtons = document.getElementsByClassName('answer');
 let option1 = document.getElementById('option1');
 let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
-let option4 = document.getElementById('option4');
-let goHomeBtn = document.getElementById('go-home-btn');
-let nextBtn= document.getElementById('next-btn');
+let option4 = document.getElementById('option4');;
 let userScore = document.getElementById('user-score');
 let timerElement = document.getElementById('timer');
 
 let userName = document.querySelector('.username');
 let endPage = document.querySelector('.end-page');
-let endHomeBtn= document.getElementById('end-home-btn');
 let userAnswer = document.getElementById('user-answer');
 let table = document.getElementById('high-scores');
 let userFinalScore = document.getElementById('user-final-score');
@@ -384,9 +381,7 @@ function saveHighScore(){
     endPage.classList.add("hidden");
     highScoreArea.classList.remove("hidden");
     userFinalScore = userScore.innerText;
-    let playerName = document.getElementById('player').innerText;
-    playerName = userName.value;
-    console.log(playerName);
+    let playerName = userName.value;
     let row = table.insertRow();
     let td1 = row.insertCell(0);
     let td2 = row.insertCell(1);
