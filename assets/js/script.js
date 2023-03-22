@@ -163,6 +163,7 @@ let gameArea = document.querySelector('.game-area');
 let rulesArea = document.querySelector('.rules-area');
 let quizArea = document.querySelector('.quiz-area');
 let highScoreArea = document.querySelector('.high-score-area');
+let enterNameArea = document.querySelector('.enter-name');
 
 
 let qImg= document.getElementById('quiz-image');
@@ -174,7 +175,7 @@ let option4 = document.getElementById('option4');
 let userScore = document.getElementById('user-score');
 let timerElement = document.getElementById('timer');
 
-let userName = document.querySelector('.username');
+let userName = document.getElementById('username');
 let endPage = document.querySelector('.end-page');
 let userAnswer = document.getElementById('user-answer');
 let table = document.getElementById('high-scores');
@@ -187,12 +188,59 @@ let currentQuestion = {};
 let timer;
 let timeLeft;
 
+/**
+ * Function for opening Enter Name Area
+ */
+function enterName(){
+    gameArea.classList.add('hidden');
+    enterNameArea.classList.remove('hidden');
+}
+/**
+ * Function for opening rules page
+ * Applied to buttons when clicked
+ */
+function openRule(){
+    gameArea.classList.add("hidden");
+    rulesArea.classList.remove("hidden");    
+}
+/**
+ * Function to close rules page and back to main page
+ * Applied to buttons when clicked
+ */
+function closeRule(){
+    gameArea.classList.remove("hidden");
+    rulesArea.classList.add("hidden");   
+}
+/**
+ * Function for opening high score page
+ * Applied to buttons when clicked
+ */
+function openHighScore(){
+    gameArea.classList.add("hidden");
+    highScoreArea.classList.remove("hidden");
+}
+/**
+ * Function to close high score page
+ * Applied to buttons when clicked
+ */
+function closeHighScore(){
+    gameArea.classList.remove("hidden");
+    highScoreArea.classList.add("hidden");
+    window.location.reload();
+}
+
 /** 
  * startGame function here
  */
 function startGame(){
-    gameArea.classList.add("hidden");
+    enterNameArea.classList.add("hidden");
     quizArea.classList.remove("hidden");
+    let welcomeStatement = document.getElementById('guess');
+    let html = `
+    <h2> Welcome ${userName.value}<h2>
+    <h3> Guess The Animal In The Image </h3>
+    `;
+    welcomeStatement.innerHTML = html;
     correctQuestions = 0;
     availableQuestions = [...questions]; // Full copy of questions
     newQuestions();
@@ -218,7 +266,12 @@ function newQuestions(){
         endPage.classList.remove('hidden');
         userFinalScore.innerText = userScore.innerText;
         userAnswer.innerText = `${correctQuestions}`;
-        userName.value = '';    
+        let congratsMessage = document.getElementById('congrats');
+        let html = `
+        <h2> Well Done ${userName.value}! </h2>
+        `;
+        congratsMessage.innerHTML = html;
+           
     }
 
     let shuffleQuestions = Math.floor(Math.random() * availableQuestions.length);
@@ -296,7 +349,7 @@ function incrementScore(){
 function goHome(){
     gameArea.classList.remove("hidden");
     quizArea.classList.add("hidden");
-    window.document.reload(gameArea);
+    window.location.reload();
 }
 /**
  * Function to start timer in quiz area
@@ -325,39 +378,6 @@ function countdown() {
  */
 function resetTimer(){
     clearInterval(timer);
-}
-/**
- * Function for opening rules page
- * Applied to buttons when clicked
- */
-function openRule(){
-    gameArea.classList.add("hidden");
-    rulesArea.classList.remove("hidden");    
-}
-/**
- * Function to close rules page and back to main page
- * Applied to buttons when clicked
- */
-function closeRule(){
-    gameArea.classList.remove("hidden");
-    rulesArea.classList.add("hidden");   
-}
-/**
- * Function for opening high score page
- * Applied to buttons when clicked
- */
-function openHighScore(){
-    gameArea.classList.add("hidden");
-    highScoreArea.classList.remove("hidden");
-}
-/**
- * Function to close high score page
- * Applied to buttons when clicked
- */
-function closeHighScore(){
-    gameArea.classList.remove("hidden");
-    highScoreArea.classList.add("hidden");
-    window.location.reload();
 }
 
 /**
