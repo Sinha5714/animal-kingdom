@@ -237,7 +237,7 @@ function startGame(){
     quizArea.classList.remove("hidden");
     let welcomeStatement = document.getElementById('guess');
     let html = `
-    <h3> Welcome ${userName.value}</h3>
+    <h3> Welcome ${userName.value}!</h3>
     <h4> Guess The Animal In The Image </h4>
     `;
     welcomeStatement.innerHTML = html;
