@@ -186,12 +186,12 @@ button:hover {
     padding: 10px;
     margin: 10px;           
 }
-.next-go-home-btns{
+.next-restart-btns{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.next-btn, .go-home-btn {
+.next-btn, .restart-btn {
     font-size: 18px;
     padding: 10px;
     margin: 10px;

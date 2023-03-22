@@ -346,10 +346,10 @@ function incrementScore(){
 /**
  * Function for Btn go-Home in quizArea
  */
-function goHome(){
-    gameArea.classList.remove("hidden");
-    quizArea.classList.add("hidden");
-    window.location.reload();
+function restartGame(){
+    quizProgress = 0;
+    startGame();
+    clearInterval(timer);
 }
 /**
  * Function to start timer in quiz area
