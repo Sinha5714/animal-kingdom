@@ -252,6 +252,9 @@ table {
 }
 /* Add media queries for devices with max-width of 1200px */
 @media screen and (max-width: 1200px){ 
+    .logo {
+        font-size: 150%;
+    }
     #quiz-image{
         max-width: 70%;
         max-height: 22vh;
@@ -259,12 +262,9 @@ table {
 }
 /* Add media queries for devices with max-width of 950px */
 @media screen and (max-width: 700px){
-    .quiz-area{
-        max-height: 100%;
-    }
     #guess{
         margin-bottom: 0;
-        font-size: 140%;
+        font-size: 120%;
         margin-top: 0;
     }
 } 
