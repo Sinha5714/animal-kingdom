@@ -349,7 +349,10 @@ function incrementScore(){
 function restartGame(){
     quizProgress = 0;
     startGame();
+    resetAnswerButtons();
+    userScore.innerText = 0;
     clearInterval(timer);
+    
 }
 /**
  * Function to start timer in quiz area
