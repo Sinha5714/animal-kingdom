@@ -5,7 +5,7 @@
 - User can also restart the game if they are not satisfied with their performance.
 - User of this website will be able to play this game multiple times and add their score to see their development.
 
-[Link to the website](https://sinha5714.github.io/pp2-animal-kingdom/)
+[Link to the website](https://sinha5714.github.io/animal-kingdom/)
 
 ![An image previewing all devices](assets/screenshots/devices-preview.png)
 
@@ -188,7 +188,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 - From the source section drop-down menu, select the Master Branch
 - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here - https://sinha5714.github.io/Underwater_Explorer/
+The live link can be found here - https://sinha5714.github.io/animal-kingdom/
 
 ### Cloning the repository
 1. Visit the GitHub page of the website’s repository
