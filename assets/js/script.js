@@ -194,6 +194,7 @@ let timeLeft;
 function enterName(){
     gameArea.classList.add('hidden');
     enterNameArea.classList.remove('hidden');
+    userName.value = "";
 }
 /**
  * Function for opening rules page
