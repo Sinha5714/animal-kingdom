@@ -9,7 +9,9 @@
 body{
     font-family: fantasy, sans-serif;
     font-weight: 900;
-    background : url(/assets/images/animals/background.jpeg) center center no-repeat;
+    background-image : url(/assets/images/animals/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
