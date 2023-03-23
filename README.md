@@ -144,11 +144,11 @@
 
 #### For Desktop 
 
-![Lighthouse result for desktop](assets/screenshots/desktop-lighthouse.png)
+![Lighthouse result for desktop](assets/images/screenshots/lighthouse-desktop.png)
 
 #### For Mobile 
 
-![Lighthouse result for mobile](assets/screenshots/mobile-lighthouse.png)
+![Lighthouse result for mobile](assets/images/screenshots/lighthouse-mobile.png)
 
 ### Tested Devices with Browsers
 - iPhone 12
@@ -165,8 +165,17 @@
 #### HTML
 - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
 
+![W3C HTML Validator](assets/images/screenshots/w3c-html.png)
+
 #### CSS
 - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+
+![W3C CSS Jigsaw](assets/images/screenshots/w3c-css.png)
+
+#### JS
+- Warnings were provided regarding unused function. These functions are called in index.html in buttons using "onclick" attribute.
+
+![JS hint image](assets/images/screenshots/js-hint.png)
 
 ### Unfixed Bugs
 - No unfixed bugs.
