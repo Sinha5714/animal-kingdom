@@ -227,9 +227,8 @@ function openHighScore(){
 function closeHighScore(){
     gameArea.classList.remove("hidden");
     highScoreArea.classList.add("hidden");
-    
+    window.location.reload();
 }
-
 /** 
  * startGame function here
  */

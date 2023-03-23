@@ -76,28 +76,28 @@
     - How to Play button : Opens the rules page of the quiz
     - High Scores button : Opens the page for high score table
     
-  ![An image of main page](/assets/screenshots/header.png)
+  ![An image of main page](/assets/images/screenshots/game-area.png)
 
 #### Rules for the Quiz
   - This page opens once the "How To Play" button is clicked on main-page.
   - This page consists of rules about how to play the game and a "Home" button.
   - Once the Home button is clicked, user goes back to the main-page.
 
-![An image of rules page](assets/screenshots/main-video.png)
+![An image of rules page](assets/images/screenshots/rule-page.png)
 
 #### Username Entry Page
 - This page opens when "Play" button is clicked in the main page.
 - This page consists of a heading, an input field for user to enter the name and a "Start Game" button.
 - Once the "Start Game" button is clicked user can start playing the quiz.
 
-![An image of Username Entry Page](/assets/screenshots/about-us.png)
+![An image of Username Entry Page](/assets/images/screenshots/enter-name.png)
 
 #### High Score Page
 - This page opens when "High Scores" button is clicked in main page.
 - This page consists of a heading, a table with Table heading of "USERNAME" and "SCORES" and a Home button.
 - Once the "Home" button is clicked, user will go back to main-page.
 
-![An image of High Score Area](assets/screenshots/why-us.png)
+![An image of High Score Area](assets/images/screenshots/high-score.png)
 
 #### Quiz Area
 - This page opens when "Start Game" button is clicked in Username Entry Page.
@@ -116,7 +116,7 @@
 - Restart button is provided for user to restart the game in the same quiz page. 
 
 
-![An image of quiz area](assets/screenshots/footer.png)
+![An image of quiz area](assets/images/screenshots/quiz-page.png)
 
 #### End Page after Quiz Completion 
 - This page opens automatically after the 10 quiz questions have been played.
@@ -129,7 +129,7 @@
     - Home button
 - Once "Save High Score" button is clicked, username and scores will be added to the high score table and "High Score Page" will be opened.
 
-![An image of end page](assets/screenshots/events.png)
+![An image of end page](assets/images/screenshots/end-page-area.png)
 
 ### Features to be implemented
 - More question images
