@@ -203,34 +203,29 @@ The live link can be found here - https://sinha5714.github.io/Underwater_Explore
 ### Content
 - The text content was provided by the site owner.
 - The fonts of the content was taken from [google fonts](https://fonts.google.com/)
-- The location is taken from [google maps](https://www.google.com/maps/)
 - The icon has been taken from [fontawesome.com](https://fontawesome.com/v6/docs/) 
 
 ### Media
-- The video used in the site was taken from [pexels.com](https://www.pexels.com/)
 - The images in the website including gallery and background are taken from [pexels.com](https://www.pexels.com/)
 
 ### Code
-#### The following code ideas were borrowed from [Love-running project](https://sinha5714.github.io/love-running/)
+#### The following code ideas were borrowed from [Love Maths](https://github.com/Sinha5714/love_Maths)
 
-- Container for images in why-us section
+-  Increment Score function
 
-- Social-media links in the footer section
+#### The following idea was a help from my Sister
 
-- Join-us form
+-  Splicing used question so that it does not repeat
 
-#### Code idea for video-player in header
+#### The following code idea was taken from google search
 
-- Code idea for video-player in header section was borrowed from Nas-Daily website".
+- setAttribute("disabled", "disabled");
 
-#### Display : Flex 
+#### Following code was provided by student in slack community
 
-- The attribute display with value: flex was learned using W3schools.
-
-#### Thank You Message Page
-
-- A student in slack has provided with useful information reagrding the value of "Action" and "Method" in form section to generate the "Thank You" page.
+- countdown();
 
 ### Thank You
-- to my mentor Can for supporting me with his feedback through the entire project
+- to my mentor Cans for supporting me with his feedback through the entire project
+- to my Sister(Manisha Sinha) who helped with the code
 - to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
