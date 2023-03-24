@@ -228,7 +228,12 @@ The live link can be found here - https://sinha5714.github.io/animal-kingdom/
 
 #### Following code was provided by student in slack community
 
+- saveHighScore();
 - countdown();
+
+#### Following code idea was provided by my Mentor
+
+- saveHighScore(); (https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value)
 
 ### Thank You
 - to my mentor @Cans_mentor for supporting me with his feedback through the entire project

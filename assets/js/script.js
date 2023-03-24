@@ -399,18 +399,31 @@ function closeEndPage(){
 }
 
 /**
- * Function to save username and score in the highScore table
+ * Function to save username and score in the highScore table and local storage
+ * Idea for coding was provided by mentor: (https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value)
+ * Code was also borrowed from Shivani_5P's project (Friends-quiz) from slack community with her consent
  */
 function saveHighScore(){
     endPage.classList.add("hidden");
     highScoreArea.classList.remove("hidden");
-    let playerName = userName.value;
-    let row = table.insertRow();
-    let td1 = row.insertCell(0);
-    let td2 = row.insertCell(1);
-    td1.innerText =  playerName;
-    td2.innerText = userFinalScore.innerText;
+// JSON.parse to covert string into an array
+// Gets high scores from local storage or returns an empty array if there is nothing there
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const highScoresList = document.getElementById("high-scores");
+    const highScore = {
+        score : userFinalScore.innerText,
+        name: userName.value
+    };
+highScores.push(highScore);
+highScores.sort((a,b) => b.score - a.score); // Sorts scores into descending order
+highScores.splice(5); // Only shows 5 high scores
 
+localStorage.setItem("highScores", JSON.stringify(highScores));
+
+highScoresList.innerHTML = highScores.map(highScores => {
+    return `<table class="high-scores"><td>${highScores.name}</td>
+     <td>${highScores.score}</td>
+     </table>`;
+})
+.join("");
 }
-
-
