@@ -7,7 +7,7 @@
 
 [Link to the website](https://sinha5714.github.io/animal-kingdom/)
 
-![An image previewing all devices](assets/screenshots/devices-preview.png)
+![An image previewing all devices](assets/images/screenshots/devices-preview.png)
 
 ## Contents
 [UX](#ux)
@@ -226,6 +226,7 @@ The live link can be found here - https://sinha5714.github.io/animal-kingdom/
 - countdown();
 
 ### Thank You
-- to my mentor Cans for supporting me with his feedback through the entire project
+- to my mentor @Cans_mentor for supporting me with his feedback through the entire project
 - to my Sister(Manisha Sinha) who helped with the code
+- to Shivani_5P from slack for concenting to borrow ideas from her project
 - to Code Institute and Slack community for helping me when I was getting stuck with some challenges.

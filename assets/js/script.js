@@ -226,8 +226,10 @@ function openHighScore(){
  */
 function closeHighScore(){
     gameArea.classList.remove("hidden");
-    highScoreArea.classList.add("hidden");
-    window.location.reload();
+    highScoreArea.classList.add("hidden"); 
+    quizProgress = 0;
+    correctQuestions = 0;
+    userScore.innerText = 0;
 }
 /** 
  * startGame function here
@@ -244,6 +246,7 @@ function startGame(){
     correctQuestions = 0;
     availableQuestions = [...questions]; // Full copy of questions
     newQuestions();
+    resetTimer();
     startTimer();
     timerElement.innerText = 15;             
 }
@@ -264,14 +267,13 @@ function newQuestions(){
     if(quizProgress > 10){
         quizArea.classList.add('hidden');
         endPage.classList.remove('hidden');
-        userFinalScore.innerText = userScore.innerText;
-        userAnswer.innerText = `${correctQuestions}`;
         let congratsMessage = document.getElementById('congrats');
         let html = `
         <h2> Well Done ${userName.value}! </h2>
         `;
         congratsMessage.innerHTML = html;
-           
+        userAnswer.innerText = `${correctQuestions}`;
+        userFinalScore.innerText = userScore.innerText;       
     }
 
     let shuffleQuestions = Math.floor(Math.random() * availableQuestions.length);
@@ -318,8 +320,8 @@ function disableAnswerButtons() {
  */
 function nextQuestion() {
     timerElement.innerText = 15;
-    startTimer();
     resetTimer();
+    startTimer();
     newQuestions();
     resetAnswerButtons();    
 }
@@ -405,7 +407,7 @@ function saveHighScore(){
     let td1 = row.insertCell(0);
     let td2 = row.insertCell(1);
     td1.innerText =  playerName;
-    td2.innerText = userFinalScore; 
+    td2.innerText = userFinalScore;
 }
 
 
