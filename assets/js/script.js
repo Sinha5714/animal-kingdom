@@ -164,8 +164,6 @@ let rulesArea = document.querySelector('.rules-area');
 let quizArea = document.querySelector('.quiz-area');
 let highScoreArea = document.querySelector('.high-score-area');
 let enterNameArea = document.querySelector('.enter-name');
-
-
 let qImg= document.getElementById('quiz-image');
 let answerButtons = document.getElementsByClassName('answer');
 let option1 = document.getElementById('option1');
@@ -174,13 +172,11 @@ let option3 = document.getElementById('option3');
 let option4 = document.getElementById('option4');
 let userScore = document.getElementById('user-score');
 let timerElement = document.getElementById('timer');
-
 let userName = document.getElementById('username');
 let endPage = document.querySelector('.end-page');
 let userAnswer = document.getElementById('user-answer');
 let table = document.getElementById('high-scores');
 let userFinalScore = document.getElementById('user-final-score');
-
 let availableQuestions = []; 
 let quizProgress = 0;
 let correctQuestions= 0; // The correct questions selected by user
@@ -196,6 +192,7 @@ function enterName(){
     enterNameArea.classList.remove('hidden');
     userName.value = "";
 }
+
 /**
  * Function for opening rules page
  * Applied to buttons when clicked
@@ -204,6 +201,7 @@ function openRule(){
     gameArea.classList.add("hidden");
     rulesArea.classList.remove("hidden");    
 }
+
 /**
  * Function to close rules page and back to main page
  * Applied to buttons when clicked
@@ -212,6 +210,7 @@ function closeRule(){
     gameArea.classList.remove("hidden");
     rulesArea.classList.add("hidden");   
 }
+
 /**
  * Function for opening high score page
  * Applied to buttons when clicked
@@ -220,6 +219,7 @@ function openHighScore(){
     gameArea.classList.add("hidden");
     highScoreArea.classList.remove("hidden");
 }
+
 /**
  * Function to close high score page
  * Applied to buttons when clicked
@@ -229,6 +229,7 @@ function closeHighScore(){
     highScoreArea.classList.add("hidden"); 
     quizProgress = 0;
 }
+
 /** 
  * startGame function here
  */
@@ -271,10 +272,9 @@ function newQuestions(){
         <h2> Well Done ${userName.value}! </h2>
         `;
         congratsMessage.innerHTML = html;
-        userAnswer.innerText = `${correctQuestions}`;
-        userFinalScore.innerText = userScore.innerText;       
+        userAnswer.innerText = `${correctQuestions}`;          
     }
-
+    userFinalScore.innerText = userScore.innerText;
     let shuffleQuestions = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[shuffleQuestions];
     qImg.src = currentQuestion.question;
@@ -284,18 +284,16 @@ function newQuestions(){
     option4.innerText = currentQuestion.answers[3]; 
     // For making sure question displayed is not repeated
     // Obtain idea of splice from my family member 
-    availableQuestions.splice(shuffleQuestions, 1); 
-  
+    availableQuestions.splice(shuffleQuestions, 1);   
 }
+
 /**
  * Function to check answer provided by user
  */
 function checkAnswer() {
-    disableAnswerButtons();
-    
+    disableAnswerButtons();  
     let userAnswer = this.innerText;
     let correctAnswer = currentQuestion.answer;
-    
         if (userAnswer === correctAnswer) {
             this.classList.add("correct");
             incrementScore();    
@@ -314,6 +312,7 @@ function disableAnswerButtons() {
         answerButtons[i].setAttribute("disabled", "disabled");
     }
 }
+
 /**
  * Function for behaviour of page after getting next question
  */
@@ -324,6 +323,7 @@ function nextQuestion() {
     newQuestions();
     resetAnswerButtons();    
 }
+
 /**
  * Resets the answerButton back to its original state
  */ 
@@ -335,6 +335,7 @@ function resetAnswerButtons() {
         answerButtons[i].removeAttribute("disabled","disabled");
     } 
 }
+
 /**
  * Function to increment score once the right option is selected by user
  * Idea taken from Love Maths project
@@ -344,6 +345,7 @@ function incrementScore(){
     userScore.innerText = oldScore + 10;  
     correctQuestions++;  
 }
+
 /**
  * Function for Btn go-Home in quizArea
  */
@@ -352,9 +354,9 @@ function restartGame(){
     startGame();
     resetAnswerButtons();
     userScore.innerText = 0;
-    clearInterval(timer);
-    
+    clearInterval(timer);    
 }
+
 /**
  * Function to start timer in quiz area
  */
@@ -365,6 +367,7 @@ function startTimer(){
         timerElement.innerText = timeLeft;
     }, 1000);
 }
+
 /**
  * Function for count down of timer
  * Idea obtain from one of the students from slack
@@ -376,6 +379,7 @@ function countdown() {
         timeLeft--;
     }
 }
+
 /**
  * Function to reset timer
  * Idea obtain from google.com
@@ -400,14 +404,12 @@ function closeEndPage(){
 function saveHighScore(){
     endPage.classList.add("hidden");
     highScoreArea.classList.remove("hidden");
-    userFinalScore = userScore.innerText;
     let playerName = userName.value;
     let row = table.insertRow();
     let td1 = row.insertCell(0);
     let td2 = row.insertCell(1);
     td1.innerText =  playerName;
-    td2.innerText = userFinalScore;
-    
+    td2.innerText = userFinalScore.innerText;   
 }
 
 

@@ -134,6 +134,10 @@
 ### Features to be implemented
 - More question images
 - Sound for the game
+- Event listners for all buttons to call functions
+- Splicing the high-score table after 5 rows
+- Adding the username and scores in local storage
+- Sorting the player name as per score
 - An online multiplayer quiz competition
 
 ## Testing
@@ -174,6 +178,7 @@
 
 #### JS
 - Warnings were provided regarding unused function. These functions are called in index.html in buttons using "onclick" attribute.
+- Will implement event listeners in future. Wanted to try "onclick" attribute as learned in the course.
 
 ![JS hint image](assets/images/screenshots/js-hint.png)
 
