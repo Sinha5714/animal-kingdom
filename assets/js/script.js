@@ -409,7 +409,8 @@ function saveHighScore(){
     let td1 = row.insertCell(0);
     let td2 = row.insertCell(1);
     td1.innerText =  playerName;
-    td2.innerText = userFinalScore.innerText;   
+    td2.innerText = userFinalScore.innerText;
+
 }
 
 
