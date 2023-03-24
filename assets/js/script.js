@@ -228,8 +228,6 @@ function closeHighScore(){
     gameArea.classList.remove("hidden");
     highScoreArea.classList.add("hidden"); 
     quizProgress = 0;
-    correctQuestions = 0;
-    userScore.innerText = 0;
 }
 /** 
  * startGame function here
@@ -245,10 +243,11 @@ function startGame(){
     welcomeStatement.innerHTML = html;
     correctQuestions = 0;
     availableQuestions = [...questions]; // Full copy of questions
+    timerElement.innerText = 15;
+    userScore.innerText = 0;
     newQuestions();
     resetTimer();
-    startTimer();
-    timerElement.innerText = 15;             
+    startTimer();                 
 }
 
 /**
@@ -408,6 +407,7 @@ function saveHighScore(){
     let td2 = row.insertCell(1);
     td1.innerText =  playerName;
     td2.innerText = userFinalScore;
+    
 }
 
 

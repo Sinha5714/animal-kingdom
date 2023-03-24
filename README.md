@@ -228,5 +228,5 @@ The live link can be found here - https://sinha5714.github.io/animal-kingdom/
 ### Thank You
 - to my mentor @Cans_mentor for supporting me with his feedback through the entire project
 - to my Sister(Manisha Sinha) who helped with the code
-- to Shivani_5P from slack for concenting to borrow ideas from her project
+- to Shivani_5P from slack for consenting to borrow ideas from her project
 - to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
