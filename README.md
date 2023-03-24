@@ -173,8 +173,14 @@
 
 ![W3C CSS Jigsaw](assets/images/screenshots/w3c-css.png)
 
-#### JS
-- Warnings were provided regarding unused function. These functions are called in index.html in buttons using "onclick" attribute.
+#### JS 
+- No errors were found when passing through the official [JShint Validator](https://jshint.com/)
+- There are 22 functions in this file.
+- Function with the largest signature take 2 arguments, while the median is 0.
+- Largest function has 17 statements in it, while the median is 3.
+- The most complex function has a cyclomatic complexity value of 2 while the median is 1.
+- Warnings were provided regarding unused functions.
+- These functions are called in index.html in buttons using "onclick" attribute.
 - Will implement event listeners in future. Wanted to try "onclick" attribute as learned in the course.
 
 ![JS hint image](assets/images/screenshots/js-hint.png)
@@ -204,6 +210,7 @@ The live link can be found here - https://sinha5714.github.io/animal-kingdom/
 
 ### Content
 - The text content was provided by the site owner.
+- The icon for the title has been taken from [favicon.io](https://favicon.io/)
 - The fonts of the content was taken from [google fonts](https://fonts.google.com/)
 - The icon has been taken from [fontawesome.com](https://fontawesome.com/v6/docs/) 
 
@@ -236,4 +243,5 @@ The live link can be found here - https://sinha5714.github.io/animal-kingdom/
 - to my mentor @Cans_mentor for supporting me with his feedback through the entire project
 - to my Sister(Manisha Sinha) who helped with the code
 - to Shivani_5P from slack for consenting to borrow ideas from her project
+- to Tutor support of Code Institute
 - to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
