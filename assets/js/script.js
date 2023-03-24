@@ -175,7 +175,6 @@ let timerElement = document.getElementById('timer');
 let userName = document.getElementById('username');
 let endPage = document.querySelector('.end-page');
 let userAnswer = document.getElementById('user-answer');
-let table = document.getElementById('high-scores');
 let userFinalScore = document.getElementById('user-final-score');
 let availableQuestions = []; 
 let quizProgress = 0;
@@ -218,6 +217,19 @@ function closeRule(){
 function openHighScore(){
     gameArea.classList.add("hidden");
     highScoreArea.classList.remove("hidden");
+    highScoresTable.innerHTML = highScores.map(highScores => {
+        return `<table>
+        <tr>
+        <th>Username</th>
+        <th>Score</th>
+        </tr>
+        <tr>
+        <td>${highScores.name}</td>
+        <td>${highScores.score}</td>
+        <tr>
+         </table>`;
+    })
+    .join("");
 }
 
 /**
@@ -403,27 +415,36 @@ function closeEndPage(){
  * Idea for coding was provided by mentor: (https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value)
  * Code was also borrowed from Shivani_5P's project (Friends-quiz) from slack community with her consent
  */
+// JSON.parse to covert string into an array
+// Gets high scores from local storage or returns an empty array if there is nothing there
+let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+let highScoresTable = document.getElementById("high-scores");
 function saveHighScore(){
     endPage.classList.add("hidden");
     highScoreArea.classList.remove("hidden");
-// JSON.parse to covert string into an array
-// Gets high scores from local storage or returns an empty array if there is nothing there
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-const highScoresList = document.getElementById("high-scores");
-    const highScore = {
-        score : userFinalScore.innerText,
-        name: userName.value
+
+let highScore = {
+    score : userFinalScore.innerText,
+    name: userName.value
     };
 highScores.push(highScore);
 highScores.sort((a,b) => b.score - a.score); // Sorts scores into descending order
-highScores.splice(5); // Only shows 5 high scores
+highScores.splice(3); // Only shows 3 high scores
 
 localStorage.setItem("highScores", JSON.stringify(highScores));
 
-highScoresList.innerHTML = highScores.map(highScores => {
-    return `<table class="high-scores"><td>${highScores.name}</td>
-     <td>${highScores.score}</td>
-     </table>`;
+highScoresTable.innerHTML = highScores.map(highScores => {
+    return `<table>
+    <tr>
+    <th>Username</th>
+    <th>Score</th>
+    </tr>
+    <tr>
+    <td>${highScores.name}</td>
+    <td>${highScores.score}</td>
+    </tr>
+    </table>
+    `;
 })
 .join("");
 }

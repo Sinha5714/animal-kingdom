@@ -97,7 +97,7 @@
 - This page consists of a heading, a table with Table heading of "USERNAME" and "SCORES" and a Home button.
 - Once the "Home" button is clicked, user will go back to main-page.
 
-![An image of High Score Area](assets/images/screenshots/high-score.png)
+![An image of High Score Area](assets/images/screenshots/high-score-page.png)
 
 #### Quiz Area
 - This page opens when "Start Game" button is clicked in Username Entry Page.
@@ -135,9 +135,6 @@
 - More question images
 - Sound for the game
 - Event listners for all buttons to call functions
-- Splicing the high-score table after 5 rows
-- Adding the username and scores in local storage
-- Sorting the player name as per score
 - An online multiplayer quiz competition
 
 ## Testing
