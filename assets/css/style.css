@@ -9,8 +9,7 @@
 body{
     font-family: fantasy, sans-serif;
     font-weight: 900;
-    background : url('../images/background.jpeg') center center no-repeat;
-    background-size: cover;
+    background : url(../images/background.jpeg) center/ cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
