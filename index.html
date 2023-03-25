@@ -45,6 +45,7 @@
         <input aria-label="Enter username" type="text" required name ="username" id = "username"  placeholder="Player Name">
         <button aria-label="Play quiz" onclick="startGame()" class="hover" id="start-btn">Start Game</button>
     </section>
+
     <!-- Rules Page : rules-area -->
     <section class="rules-area hidden">
         <h2>How to Play</h2>
@@ -99,7 +100,6 @@
             <p>You answered <strong><span id ="user-answer"></span> /10</strong> correctly.</p>
             <p><strong>Your total score is <span id ="user-final-score"></span> /100</strong></p>
             <br>
-            
             <!-- Buttons have been provided onclick attribute with required functions -->
             <button aria-label="Save high score" onclick ="saveHighScore()" type="submit" class="end-btn hover" id="save-score-btn">Save High
                 Score</button>
@@ -114,7 +114,6 @@
         </header>
         <h2>Our Top Scorers !</h2>
         <div id="high-scores"></div>              
-       
         <!-- Buttons have been provided onclick attribute with required functions -->
         <button aria-label="Return Home" onclick="closeHighScore()" class="end-btn hover">Home</button>
     </section>               

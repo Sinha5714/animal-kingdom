@@ -1,12 +1,12 @@
 /* Import Google Fonts Here */
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Butterfly+Kids&family=Montserrat&family=Righteous&display=swap');
 
-*{
+* {
     margin: 0 auto;
     border: none;
     padding: 0;
 }
-body{
+body {
     font-family: fantasy, sans-serif;
     font-weight: 900;
     background : url(../images/background.jpeg) center/ cover no-repeat;
@@ -16,11 +16,11 @@ body{
     height: 100vh;
     width: 100vw;
 }
-h1,h2{
+h1,h2 {
     text-transform: uppercase;
 }
 /* Style all areas together  */
-.game-area ,.rules-area, .quiz-area, .end-page,.high-score-area{
+.game-area ,.rules-area, .quiz-area, .end-page,.high-score-area {
         width: 600px;
         min-height: 420px;
         max-width: 70%;
@@ -32,7 +32,7 @@ h1,h2{
 }
 
 /* Style enter name area */
-.enter-name{
+.enter-name {
     width: 400px;
     min-height: 420px;
     max-width: 70%;
@@ -65,7 +65,7 @@ h1,h2{
 }
 
 /* Style logo with heading inside */
-.logo{
+.logo {
     font-size: 180%;
     font-family:  'Alkatra', cursive, sans-serif;
     color: #c30000;
@@ -79,14 +79,13 @@ h1,h2{
     position: relative;
 }
 /* Style hidden class to be used in JS */
-.hidden{
+.hidden {
     display: none;
 }
 /* Add hover property to class hover */
 .hover:hover {
     background-color: rgb(248, 8, 240);
-    font-size: 150%;
-   
+    font-size: 150%;   
 }
 /* Style correct and incorrect class to be used in JS*/
 .correct {
@@ -97,7 +96,7 @@ h1,h2{
 }
 
 /* Style Rules Area */
-.rules-area h2{
+.rules-area h2 {
     font-weight: 400;
     font-size: 180%;
     color: rgb(222, 246, 9);
@@ -113,7 +112,7 @@ h1,h2{
     text-transform: capitalize; 
     text-decoration: underline;   
 }
-li{
+li {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 30px;
@@ -124,18 +123,18 @@ li{
 }
 
 /* Style home page */
-#start-page{
+#start-page {
     top: 30px;
     margin-bottom: 50px;
     position: relative;
 }
-#start-page h2{
+#start-page h2 { 
     font-weight: 400;
     font-size: 180%;
     color: rgb(225, 255, 0);
     text-transform: capitalize;
 }
-#start-page p{
+#start-page p {
     color: rgb(0 255 0);
     font-size: 130%;
 }
@@ -168,13 +167,12 @@ button:hover {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#quiz-image{
+#quiz-image {
     min-width: 60%;
     max-height: 35vh;
-    padding: 10px;
-    
+    padding: 10px;    
 }
-#guess{
+#guess {
     margin-top: 30px;
     margin-bottom: 20px;
     color: rgb(230 244 8);
@@ -189,12 +187,11 @@ button:hover {
     flex-direction: row;   
 }
 .answer {
-    
     font-size: 18px;
     padding: 10px;
     margin: 10px;           
 }
-.next-restart-btns{
+.next-restart-btns {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -234,7 +231,7 @@ button:hover {
 }
 
 /* Style high score area and table */
-.high-score-area h2{
+.high-score-area h2 {
     margin-top: 30px;
     margin-bottom: 20px;
     color: rgb(230 244 8);
@@ -245,7 +242,7 @@ table, td, tr, th {
     padding: 0.25rem;
     color: aqua;
 }
-th{
+th {
     color: bisque;
 }
 
@@ -254,19 +251,20 @@ table {
     width: 60%;
     margin-bottom: 30px;
 }
+
 /* Add media queries for devices with max-width of 1200px */
 @media screen and (max-width: 1200px){ 
     .logo {
         font-size: 150%;
     }
-    #quiz-image{
+    #quiz-image {
         max-width: 70%;
         max-height: 22vh;
     }
 }
 /* Add media queries for devices with max-width of 950px */
 @media screen and (max-width: 700px){
-    #guess{
+    #guess {
         margin-bottom: 0;
         font-size: 100%;
         margin-top: 0;
